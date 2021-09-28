@@ -16,5 +16,13 @@ struct Post {
     var message: String
     var likes: Int
     var numberOfComments: Int
+    
+    mutating func like(){
+        likes += 1
+    }
 }
+
+var p = Post(message: "Coding is decent", likes: 1000, numberOfComments: 100)
+p.like()
+print(p.likes)
 //: [Previous](@previous)  |  page 5 of 10  |  [Next: App Exercise - Workout Functions](@next)
